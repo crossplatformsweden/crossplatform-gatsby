@@ -5,12 +5,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/29448ce0b97eca6bd89c/maintainability)](https://codeclimate.com/github/crossplatformsweden/crossplatform-gatsby/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/29448ce0b97eca6bd89c/test_coverage)](https://codeclimate.com/github/crossplatformsweden/crossplatform-gatsby/test_coverage)
 
-Gatsby 2.0 starter for generate awesome static website working with a nice env development.
-
-## Warning
-
-This starter is currently in wip (see progression to #What's inside session).
-
 ## Getting started
 
 Install this starter (assuming Gatsby is installed) by running from your CLI:
@@ -86,3 +80,9 @@ simple bootstrap of current file pattern (eg. components/pages/blog posts). e.g.
 You can add/delete/modify any generators into `/generators` folder.
 
 Be lazy and have fun!
+
+## Publishing - Amplify.
+
+1. Configure Amplify. `amplify configure`
+
+2. Publish `amplify publish`

@@ -1,0 +1,20 @@
+{
+    "projectName": "crossplatformgatsby",
+    "projectPath": "/Users/xemil/Source/crossplatform-gatsby",
+    "defaultEditor": "code",
+    "frontendHandler": {
+        "javascript": "/Users/xemil/.config/yarn/global/node_modules/amplify-frontend-javascript"
+    },
+    "javascript": {
+        "framework": "react",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "public",
+            "BuildCommand": "npm run-script build",
+            "StartCommand": "npm run-script start"
+        }
+    },
+    "providers": {
+        "awscloudformation": "/Users/xemil/.config/yarn/global/node_modules/amplify-provider-awscloudformation"
+    }
+}

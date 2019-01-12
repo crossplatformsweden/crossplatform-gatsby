@@ -1,0 +1,32 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "crossplatformgatsby-20190112155625-authRole",
+            "UnauthRoleArn": "arn:aws:iam::510527030104:role/crossplatformgatsby-20190112155625-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::510527030104:role/crossplatformgatsby-20190112155625-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "crossplatformgatsby-20190112155625-deployment",
+            "UnauthRoleName": "crossplatformgatsby-20190112155625-unauthRole",
+            "StackName": "crossplatformgatsby-20190112155625",
+            "StackId": "arn:aws:cloudformation:eu-west-1:510527030104:stack/crossplatformgatsby-20190112155625/3c1c2750-167a-11e9-8f1f-0233b49b0800"
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "service": "S3AndCloudFront",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/crossplatformgatsby-20190112155625-deployment/amplify-cfn-templates/hosting/template.json",
+                "logicalId": "hostingS3AndCloudFront"
+            },
+            "lastPushTimeStamp": "2019-01-12T14:59:20.295Z",
+            "output": {
+                "S3BucketSecureURL": "https://crossplatformgatsby-20190112155748--hostingbucket.s3.amazonaws.com",
+                "WebsiteURL": "http://crossplatformgatsby-20190112155748--hostingbucket.s3-website-eu-west-1.amazonaws.com",
+                "Region": "eu-west-1",
+                "HostingBucketName": "crossplatformgatsby-20190112155748--hostingbucket"
+            },
+            "lastPushDirHash": "kWRNr7wTQqh705QfGW2DqsVY2vU="
+        }
+    }
+}
