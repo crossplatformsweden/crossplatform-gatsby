@@ -90,11 +90,13 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
     "flat": "^2.0.1",
-    "husky": "0.13.3",
+    "husky": "^1.3.1",
     "jest": "19.0.2",
     "lint-staged": "3.4.0",
     "mkdirp": "^0.5.1",
     "plop": "^1.7.4",
+    "prettier": "^1.15.3",
+    "pretty-quick": "^1.8.0",
     "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^15.5.1",
     "react-test-renderer": "16",
@@ -137,38 +139,9 @@
       "html"
     ]
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "tslint --fix",
-      "git add"
-    ],
-    "*.{js,jsx}": [
-      "xo --fix",
-      "git add"
-    ],
-    "*.md": [
-      "node tools/update-post-date.js",
-      "remark -o",
-      "git add"
-    ],
-    "*.css": [
-      "stylelint"
-    ]
-  },
-  "xo": {
-    "extends": "xo-react/space",
-    "space": true,
-    "rules": {
-      "no-case-declarations": 0,
-      "default-case": 0
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
     }
-  },
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard"
   }
 }

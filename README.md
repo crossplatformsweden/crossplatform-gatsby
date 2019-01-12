@@ -1,6 +1,6 @@
 # Gatsby 2.0 starter
 
-[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Build Status](https://travis-ci.org/crossplatformsweden/crossplatform-gatsby.svg?branch=master)](https://travis-ci.org/crossplatformsweden/crossplatform-gatsby)
 [![Maintainability](https://api.codeclimate.com/v1/badges/29448ce0b97eca6bd89c/maintainability)](https://codeclimate.com/github/crossplatformsweden/crossplatform-gatsby/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/29448ce0b97eca6bd89c/test_coverage)](https://codeclimate.com/github/crossplatformsweden/crossplatform-gatsby/test_coverage)
