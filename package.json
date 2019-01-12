@@ -8,7 +8,7 @@
         "start": "gatsby develop",
         "develop": "gatsby develop",
         "build": "gatsby build",
-        "lint": "prettier **/* --write",
+        "lint": "prettier --write \"**/*.+(js|md|ts|css|sass|less|graphql|yml|yaml|scss|json|vue)\"",
         "test": "jest",
         "publish": "amplify publish",
         "test:watch": "jest --watch",

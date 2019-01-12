@@ -1,20 +1,20 @@
 language: node_js
 node_js:
-  - '10.10.0'
+    - '10.10.0'
 os:
-  - linux
-  - osx
+    - linux
+    - osx
 sudo: false
 addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-  code_climate:
-    repo_token: 8bac57e4d3eb255ded472b5d06e1e2873041b0bd06db6f2b0cf635d934d02b67
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - g++-4.8
+    code_climate:
+        repo_token: 8bac57e4d3eb255ded472b5d06e1e2873041b0bd06db6f2b0cf635d934d02b67
 osx_image: xcode8
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX=g++-4.8; fi
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX=g++-4.8; fi
 after_script:
-  - npm run codeclimate
+    - npm run codeclimate
