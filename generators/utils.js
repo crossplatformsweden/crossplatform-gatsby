@@ -9,7 +9,7 @@ const mkdirp = require('mkdirp');
  * @return {boolean|string}
  */
 const inputRequired = name => {
-  return value => (/.+/.test(value) ? true : `${name} is required`);
+    return value => (/.+/.test(value) ? true : `${name} is required`);
 };
 
 /**
@@ -24,26 +24,26 @@ const inputRequired = name => {
  *   @param {string} action.templateFile
  * @param {object} data
  */
-const addWithCustomData = function (plop, action, data) {
-  const makeDestPath = p => path.resolve(plop.getDestBasePath(), p);
-  const makeTmplPath = p => path.resolve(plop.getPlopfilePath(), p);
+const addWithCustomData = function(plop, action, data) {
+    const makeDestPath = p => path.resolve(plop.getDestBasePath(), p);
+    const makeTmplPath = p => path.resolve(plop.getPlopfilePath(), p);
 
-  return function () {
-    try {
-      const fileDestPath = makeDestPath(
-        plop.renderString(action.path || '', data)
-      );
-      const template = fs.readFileSync(
-        makeTmplPath(action.templateFile),
-        'utf-8'
-      );
-      mkdirp.sync(path.dirname(fileDestPath));
-      fs.writeFileSync(fileDestPath, plop.renderString(template, data));
-      return `add ${fileDestPath}`;
-    } catch (err) {
-      return err.message;
-    }
-  };
+    return function() {
+        try {
+            const fileDestPath = makeDestPath(
+                plop.renderString(action.path || '', data)
+            );
+            const template = fs.readFileSync(
+                makeTmplPath(action.templateFile),
+                'utf-8'
+            );
+            mkdirp.sync(path.dirname(fileDestPath));
+            fs.writeFileSync(fileDestPath, plop.renderString(template, data));
+            return `add ${fileDestPath}`;
+        } catch (err) {
+            return err.message;
+        }
+    };
 };
 
-module.exports = {inputRequired, addWithCustomData};
+module.exports = { inputRequired, addWithCustomData };
