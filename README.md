@@ -4,9 +4,6 @@
 [![Build Status](https://travis-ci.org/crossplatformsweden/crossplatform-gatsby.svg?branch=master)](https://travis-ci.org/crossplatformsweden/crossplatform-gatsby)
 [![Maintainability](https://api.codeclimate.com/v1/badges/29448ce0b97eca6bd89c/maintainability)](https://codeclimate.com/github/crossplatformsweden/crossplatform-gatsby/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/29448ce0b97eca6bd89c/test_coverage)](https://codeclimate.com/github/crossplatformsweden/crossplatform-gatsby/test_coverage)
-Demo: <https://fabien0102-gatsby-starter.netlify.com/>
-
-Storybook: <https://fabien0102-gatsby-starter.netlify.com/docs/>
 
 Gatsby 2.0 starter for generate awesome static website working with a nice env development.
 
@@ -17,10 +14,6 @@ This starter is currently in wip (see progression to #What's inside session).
 ## Getting started
 
 Install this starter (assuming Gatsby is installed) by running from your CLI:
-
-```bash
-$ gatsby new my-website https://github.com/fabien0102/gatsby-starter
-```
 
 Run `npm start` (or press `F5` if you are on VSCode) to hot-serve your website on <http://localhost:8000>.
 
