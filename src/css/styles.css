@@ -27,6 +27,11 @@
     font-weight: normal;
 }
 
+.ui.secondary.secondary.pointing.menu {
+    border-bottom: 0 none !important;
+    box-shadow: none;
+}
+
 .ui.vertical.stripe {
     padding: 8em 0;
 }
