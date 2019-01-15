@@ -21,7 +21,7 @@ export interface LayoutProps {
         pathname: string;
     };
     children: any;
-    headerLogosrc: string;
+    data: any;
 }
 
 const Layout = (props: LayoutProps) => {
@@ -45,7 +45,7 @@ const Layout = (props: LayoutProps) => {
                             Link={Link}
                             pathname={pathname}
                             items={menuItems}
-                            logosrc={props.headerLogosrc}
+                            data={props.data}
                         />
                     )}
 
@@ -82,7 +82,7 @@ export const withLayout = <P extends object>(
     class WithLayout extends React.Component<P & LayoutProps> {
         render() {
             return (
-                <Layout location={this.props.location}>
+                <Layout location={this.props.location} data={this.props.data}>
                     <WrappedComponent {...this.props} />
                 </Layout>
             );
