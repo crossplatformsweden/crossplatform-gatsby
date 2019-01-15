@@ -4,7 +4,7 @@ import { Dispatch } from 'redux';
 import { toggleSidebar } from '../../store';
 import { Container, Menu, Image } from 'semantic-ui-react';
 import { MenuProps } from '../Menu';
-import { StaticQuery } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 interface HeaderMenuProps extends MenuProps {
     dispatch?: Dispatch<any>;
     inverted?: boolean;
@@ -19,7 +19,28 @@ export const HeaderMenu = ({
 }: HeaderMenuProps) => {
     return (
         <StaticQuery
-            query={query}
+            query={graphql`
+                query {
+                    headerQuery: file(
+                        relativePath: { eq: "media/Crossplatform_Web.png" }
+                    ) {
+                        publicURL
+                        childImageSharp {
+                            fixed(width: 70, height: 70) {
+                                tracedSVG
+                                base64
+                                aspectRatio
+                                width
+                                height
+                                src
+                                srcSet
+                                srcWebp
+                                srcSetWebp
+                            }
+                        }
+                    }
+                }
+            `}
             render={(data: any) => (
                 <Container>
                     <Menu size="large" pointing secondary inverted={inverted}>
@@ -63,23 +84,3 @@ export const HeaderMenu = ({
 };
 
 export default connect()(HeaderMenu);
-export const query = graphql`
-    query {
-        headerQuery: file(relativePath: { eq: "media/Crossplatform_Web.png" }) {
-            publicURL
-            childImageSharp {
-                fixed(width: 70, height: 70) {
-                    tracedSVG
-                    base64
-                    aspectRatio
-                    width
-                    height
-                    src
-                    srcSet
-                    srcWebp
-                    srcSetWebp
-                }
-            }
-        }
-    }
-`;
